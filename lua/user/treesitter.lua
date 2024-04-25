@@ -1,5 +1,5 @@
 local configs = require("nvim-treesitter.configs")
-configs.setup {
+configs.setup({
   ensure_installed = {
     "angular",
     "bash",
@@ -61,4 +61,4 @@ configs.setup {
     enable = true,
     enable_autocmd = false,
   },
-}
+})

@@ -93,6 +93,9 @@ return packer.startup(function(use)
   -- Git
   use("git@github.com:lewis6991/gitsigns.nvim")
 
+  -- Substitute
+  use("git@github.com:gbprod/substitute.nvim")
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
