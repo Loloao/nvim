@@ -5,7 +5,7 @@ end
 
 substitute.setup()
 
-vim.keymap.set("n", "gr", require("substitute").operator, { noremap = true })
-vim.keymap.set("n", "grr", require("substitute").line, { noremap = true })
-vim.keymap.set("n", "gR", require("substitute").eol, { noremap = true })
-vim.keymap.set("x", "gr", require("substitute").visual, { noremap = true })
+vim.keymap.set("n", "s", substitute.operator, { noremap = true })
+vim.keymap.set("n", "ss", substitute.line, { noremap = true })
+vim.keymap.set("n", "S", substitute.eol, { noremap = true })
+vim.keymap.set("x", "s", substitute.visual, { noremap = true })

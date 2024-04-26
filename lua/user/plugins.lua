@@ -93,7 +93,7 @@ return packer.startup(function(use)
   -- Git
   use("git@github.com:lewis6991/gitsigns.nvim")
 
-  -- Substitute
+  -- Text edit plugins
   use("git@github.com:gbprod/substitute.nvim")
 
   -- Automatically set up your configuration after cloning packer.nvim
