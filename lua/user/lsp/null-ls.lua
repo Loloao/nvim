@@ -14,6 +14,7 @@ local lSsources = {
       "graphql",
       "md",
       "txt",
+      "vue",
     },
     only_local = "node_modules/.bin",
   }),
