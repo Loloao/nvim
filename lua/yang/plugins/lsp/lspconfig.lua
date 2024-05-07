@@ -123,6 +123,24 @@ return {
 					},
 				})
 			end,
+			["tsserver"] = function()
+				lspconfig["tsserver"].setup({
+					init_options = {
+						plugins = {
+							{
+								name = "@vue/typescript-plugin",
+								location = vim.fn.system("npm root -g") .. "/@vue/typescript-plugin",
+								languages = { "typescript", "vue" },
+							},
+						},
+					},
+					filetypes = {
+						"javascript",
+						"typescript",
+						"vue",
+					},
+				})
+			end,
 			["lua_ls"] = function()
 				-- configure lua server (with special settings)
 				lspconfig["lua_ls"].setup({
