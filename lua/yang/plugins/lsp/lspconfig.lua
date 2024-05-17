@@ -125,6 +125,7 @@ return {
 			end,
 			["tsserver"] = function()
 				lspconfig["tsserver"].setup({
+					capabilities = capabilities,
 					init_options = {
 						plugins = {
 							{
@@ -162,6 +163,7 @@ return {
 			["volar"] = function()
 				local tsdkPath = vim.fn.system("npm root -g") .. "/typescript/lib"
 				lspconfig["volar"].setup({
+					capabilities = capabilities,
 					init_options = {
 						typescript = {
 							tsdk = tsdkPath:gsub("\n", ""),

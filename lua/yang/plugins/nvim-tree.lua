@@ -37,6 +37,7 @@ return {
 			--[[ vim.keymap.set('n', '.',       api.node.run.cmd,                    opts('Run Command')) ]]
 			--[[ vim.keymap.set('n', '-',       api.tree.change_root_to_parent,      opts('Up')) ]]
 			--[[ vim.keymap.set('n', 'a',       api.fs.create,                       opts('Create File Or Directory')) ]]
+			vim.keymap.set("n", "f", api.fs.create, opts("Create File Or Directory"))
 			--[[ vim.keymap.set('n', 'bd',      api.marks.bulk.delete,               opts('Delete Bookmarked')) ]]
 			--[[ vim.keymap.set('n', 'bt',      api.marks.bulk.trash,                opts('Trash Bookmarked')) ]]
 			--[[ vim.keymap.set('n', 'bmv',     api.marks.bulk.move,                 opts('Move Bookmarked')) ]]
@@ -71,7 +72,7 @@ return {
 			--[[ vim.keymap.set('n', 'r',       api.fs.rename,                       opts('Rename')) ]]
 			--[[ vim.keymap.set('n', 'R',       api.tree.reload,                     opts('Refresh')) ]]
 			--[[ vim.keymap.set('n', 's',       api.node.run.system,                 opts('Run System')) ]]
-			--[[ vim.keymap.set('n', 'S',       api.tree.search_node,                opts('Search')) ]]
+			vim.keymap.set("n", "/", api.tree.search_node, opts("Search"))
 			--[[ vim.keymap.set('n', 'u',       api.fs.rename_full,                  opts('Rename: Full Path')) ]]
 			--[[ vim.keymap.set('n', 'U',       api.tree.toggle_custom_filter,       opts('Toggle Filter: Hidden')) ]]
 			--[[ vim.keymap.set('n', 'W',       api.tree.collapse_all,               opts('Collapse')) ]]
