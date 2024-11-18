@@ -1,6 +1,7 @@
 return {
 	-- Text edit plugins
 	"git@github.com:gbprod/substitute.nvim",
+	vscode = true,
 	config = function()
 		local status_ok, substitute = pcall(require, "substitute")
 		if not status_ok then

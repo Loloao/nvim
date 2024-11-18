@@ -1,6 +1,7 @@
 return {
 	"git@github.com:neovim/nvim-lspconfig",
 	event = { "BufReadPre", "BufNewFile" },
+	vscode = false,
 	dependencies = {
 		"git@github.com:hrsh7th/cmp-nvim-lsp",
 		{ "git@github.com:antosha417/nvim-lsp-file-operations", config = true },
@@ -167,6 +168,16 @@ return {
 					init_options = {
 						typescript = {
 							tsdk = tsdkPath:gsub("\n", ""),
+						},
+					},
+				})
+			end,
+			["eslint"] = function()
+				lspconfig["eslint"].setup({
+					capabilities = capabilities,
+					settings = {
+						workingDirectory = {
+							mode = "location",
 						},
 					},
 				})
