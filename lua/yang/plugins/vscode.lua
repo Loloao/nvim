@@ -13,6 +13,7 @@ local enabled = {
 	"mini.surround",
 	"sqlite.lua",
 	"substitute",
+	"text-object",
 	"yanky.nvim",
 	"highlight-undo.nvim",
 	"nvim-multi-cursor",
