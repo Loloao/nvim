@@ -1,14 +1,13 @@
 return {
 	-- Text edit plugins
 	"git@github.com:gbprod/substitute.nvim",
-	vscode = true,
 	config = function()
 		local status_ok, substitute = pcall(require, "substitute")
 		if not status_ok then
 			return
 		end
 
-		substitute.setup()
+		substitute.setup({})
 
 		vim.keymap.set("n", "s", substitute.operator, { noremap = true })
 		vim.keymap.set("n", "ss", substitute.line, { noremap = true })

@@ -12,7 +12,6 @@ local enabled = {
 	"mini.indentscope",
 	"mini.surround",
 	"sqlite.lua",
-	"substitute",
 	"text-object",
 	"yanky.nvim",
 	"highlight-undo.nvim",
