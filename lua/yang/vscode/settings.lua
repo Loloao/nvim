@@ -54,17 +54,3 @@ keymap({ "n", "v" }, "T", vscode_action("workbench.action.closeActiveEditor"))
 keymap({ "n", "v" }, "<leader>f", vscode_action("workbench.view.search"))
 keymap({ "n", "v" }, "<leader>p", vscode_action("workbench.action.quickOpen"))
 keymap({ "n", "v" }, "<C-h>", vscode_action("workbench.explorer.fileView.focus"))
-
--- substitute
-local substitute = require("substitute")
-substitute.setup({
-	modifiers = nil,
-	highlight_substituted_text = {
-		enabled = true,
-		timer = 500,
-	},
-})
-keymap("n", "s", require("substitute").operator, { noremap = true })
-keymap("n", "ss", require("substitute").line, { noremap = true, desc = "substitute line" })
-keymap("n", "S", require("substitute").eol, { noremap = true })
-keymap("x", "s", require("substitute").visual, { noremap = true })

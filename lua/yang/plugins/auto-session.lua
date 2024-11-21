@@ -1,5 +1,5 @@
 return {
-	"rmagatti/auto-session",
+	"git@github.com:rmagatti/auto-session",
 	config = function()
 		local auto_session = require("auto-session")
 

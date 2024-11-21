@@ -11,7 +11,26 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({ { import = "yang.plugins" }, { import = "yang.plugins.lsp" } }, {
+require("lazy").setup({
+	{
+		import = "yang.plugins",
+		cond = function()
+			return not vim.g.vscode
+		end,
+	},
+	{
+		import = "yang.plugins.lsp",
+		cond = function()
+			return not vim.g.vscode
+		end,
+	},
+	{
+		import = "yang.vscode.plugins",
+		cond = function()
+			return vim.g.vscode
+		end,
+	},
+}, {
 	checker = {
 		enabled = true,
 		notify = false,
