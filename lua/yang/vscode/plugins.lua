@@ -1,6 +1,7 @@
 local substitute = require("yang.plugins.substitute")
 local surround = require("yang.plugins.surround")
 local textObject = require("yang.plugins.text-object")
+local flash = require("yang.plugins.flash")
 
 if not vim.g.vscode then
 	return {}
@@ -9,13 +10,8 @@ end
 return {
 	substitute,
 	surround,
+	flash,
 	textObject,
-	{
-		"git@github.com:folke/flash.nvim",
-		init = function()
-			vim.api.nvim_set_hl(0, "FlashLabel", { fg = "#f9fafe", bg = "#ff007c", italic = true, bold = true })
-		end,
-	},
 	{
 		"git@github.com:mrbeardad/nvim-multi-cursor",
 		keys = {
