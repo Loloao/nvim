@@ -1,7 +1,6 @@
 local substitute = require("yang.plugins.substitute")
 local surround = require("yang.plugins.surround")
 local textObject = require("yang.plugins.text-object")
-local flash = require("yang.plugins.flash")
 
 if not vim.g.vscode then
 	return {}
@@ -10,7 +9,6 @@ end
 return {
 	substitute,
 	surround,
-	flash,
 	textObject,
 	{
 		"git@github.com:mrbeardad/nvim-multi-cursor",

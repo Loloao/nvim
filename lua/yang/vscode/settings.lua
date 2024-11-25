@@ -38,6 +38,7 @@ keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 
 keymap("n", "<Esc>", "<Cmd>nohlsearch|diffupdate|normal! <C-L><CR><Esc>", { desc = "Clear Highlight" })
+keymap({ "o", "x" }, "ae", "<cmd>lua require('various-textobjs').entireBuffer()<CR>")
 
 vim.notify = vscode.notify
 vim.g.clipboard = vim.g.vscode_clipboard
@@ -54,3 +55,4 @@ keymap({ "n", "v" }, "T", vscode_action("workbench.action.closeActiveEditor"))
 keymap({ "n", "v" }, "<leader>f", vscode_action("workbench.view.search"))
 keymap({ "n", "v" }, "<leader>p", vscode_action("workbench.action.quickOpen"))
 keymap({ "n", "v" }, "<C-h>", vscode_action("workbench.explorer.fileView.focus"))
+keymap({ "n", "v" }, "<leader>d", vscode_action("editor.action.showHover"))
