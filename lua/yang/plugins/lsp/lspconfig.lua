@@ -80,8 +80,12 @@ return {
 		end
 
 		mason_lspconfig.setup_handlers({
+
 			-- default handler for installed servers
 			function(server_name)
+				if server_name == "tsserver" then
+					server_name = "ts_ls"
+				end
 				lspconfig[server_name].setup({
 					capabilities = capabilities,
 				})
@@ -124,8 +128,8 @@ return {
 					},
 				})
 			end,
-			["tsserver"] = function()
-				lspconfig["tsserver"].setup({
+			["ts_ls"] = function()
+				lspconfig["ts_ls"].setup({
 					capabilities = capabilities,
 					init_options = {
 						plugins = {
