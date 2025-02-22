@@ -11,6 +11,7 @@ return {
 
 		bufferline.setup({
 			options = {
+				left_trunc_marker = "",
 				numbers = "none", -- | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
 				close_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
 				right_mouse_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
@@ -25,8 +26,8 @@ return {
 				modified_icon = "●",
 				close_icon = "",
 				-- close_icon = '',
-				left_trunc_marker = "",
-				right_trunc_marker = "",
+				-- left_trunc_marker = "",
+				-- right_trunc_marker = "",
 				--- name_formatter can be used to change the buffer's label in the bufferline.
 				--- Please note some names can/will break the
 				--- bufferline so use this at your discretion knowing that it has
@@ -62,7 +63,7 @@ return {
 				--   end
 				-- end,
 				offsets = { { filetype = "NvimTree", text = "", padding = 1 } },
-				show_buffer_icons = true,
+				show_buffer_icons = false,
 				show_buffer_close_icons = true,
 				show_close_icon = true,
 				show_tab_indicators = true,

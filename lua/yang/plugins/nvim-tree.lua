@@ -1,6 +1,6 @@
 return {
 	"git@github.com:kyazdani42/nvim-tree.lua",
-	dependencies = "git@github.com:kyazdani42/nvim-web-devicons",
+	dependencies = "git@github.com:nvim-tree/nvim-web-devicons",
 	config = function()
 		-- following options are the default
 		-- each of these are documented in `:help nvim-tree.OPTION_NAME`
@@ -101,23 +101,18 @@ return {
 			},
 			-- 当文件有问题时在file tree 中展示
 			diagnostics = {
-				enable = true,
-				icons = {
-					hint = "",
-					info = "",
-					warning = "",
-					error = "",
-				},
+				enable = false,
+				-- icons = {
+				-- 	hint = "",
+				-- 	info = "",
+				-- 	warning = "",
+				-- 	error = "",
+				-- },
 			},
 			update_focused_file = {
 				enable = true,
 				update_cwd = true,
 				ignore_list = {},
-			},
-			git = {
-				enable = true,
-				ignore = true,
-				timeout = 500,
 			},
 			view = {
 				width = 30,
@@ -139,33 +134,17 @@ return {
 				},
 			},
 			renderer = {
-				highlight_git = true,
 				root_folder_label = ":t",
 				icons = {
 					show = {
-						file = true,
-						folder = true,
-						folder_arrow = true,
-						git = true,
+						file = false,
+						folder = false,
 					},
+
 					glyphs = {
-						default = "",
-						symlink = "",
-						git = {
-							unstaged = "",
-							staged = "S",
-							unmerged = "",
-							renamed = "➜",
-							deleted = "",
-							untracked = "U",
-							ignored = "◌",
-						},
 						folder = {
-							default = "",
-							open = "",
-							empty = "",
-							empty_open = "",
-							symlink = "",
+							arrow_closed = "+",
+							arrow_open = "-",
 						},
 					},
 				},
